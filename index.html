@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Универсальный chemical калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Химический анализатор</h1>
+        <p class="subtitle">Итоговый проект по химии и информатике</p>
+
+        <!-- КАРТОЧКА 1: Анализ свойств одного вещества -->
+        <div class="calculator-card">
+            <h3>Валентность, масса и электронное строение</h3>
+            
+            <div class="input-group">
+                <label for="formula">Введите формулу вещества:</label>
+                <!-- autocomplete="off" полностью отключает встроенную историю браузера -->
+                <input type="text" id="formula" placeholder="Например: Al2O3, H2SO4, Ca(NO3)2, HCl" autocomplete="off">
+            </div>
+
+            <button id="calc-btn">Рассчитать свойства</button>
+
+            <div id="result" class="result-box hidden">
+                <!-- Сюда скрипт выведет комплексный ответ по веществу -->
+            </div>
+        </div>
+
+        <!-- КАРТОЧКА 2: Уравнивание химических реакций -->
+        <div class="calculator-card">
+            <h3>Уравнивание химических реакций</h3>
+            <div class="input-group">
+                <label for="equation">Введите уравнение реакции:</label>
+                <input type="text" id="equation" placeholder="Например: H2 + O2 = H2O или Al + O2 = Al2O3" autocomplete="off">
+            </div>
+
+            <button id="equal-btn">Уравнять реакцию</button>
+
+            <div id="eq-result" class="result-box hidden">
+                <!-- Сюда скрипт выведет сбалансированное уравнение -->
+            </div>
+        </div>
+
+        <!-- КАРТОЧКА 3: Справочник приложения -->
+        <div class="info-card">
+            <h3>Справочник калькулятора</h3>
+            <p><strong>Постоянные валентности металлов:</strong></p>
+            <ul>
+                <li><strong>I:</strong> Li, Na, K, Ag</li>
+                <li><strong>II:</strong> Mg, Ca, Zn, Ba</li>
+                <li><strong>III:</strong> Al, B, Sc</li>
+            </ul>
+            <p><strong>Валентности кислотных остатков:</strong></p>
+            <ul>
+                <li><strong>I:</strong> NO₃ (нитрат), Cl (хлорид), OH (гидроксид), Br (бромид)</li>
+                <li><strong>II:</strong> SO₄ (сульфат), CO₃ (карбонат), SO₃ (сульфит), SiO₃ (силикат)</li>
+                <li><strong>III:</strong> PO₄ (фосфат)</li>
+            </ul>
+            <p><small style="color: #7f8c8d;">* Приложение автоматически рассчитывает распределение электронов по оболочкам на основе порядкового номера элемента (Z) до 4 периода включительно.</small></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
